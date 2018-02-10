@@ -40,7 +40,8 @@ function liriSwitcher(command, subject) {
             break;
         default:
             console.log("--------------------------");
-            console.log("--------------------------");
+            console.log("something is awfully wrong");
+            console.log("--------------------------\n");
             break;
     }
 }
