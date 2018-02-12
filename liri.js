@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+const keys = require('./keys');
 // Include request npm package
 const request = require('request');
 // Include fs core Node package for read and write
@@ -9,17 +9,14 @@ const Spotify = require('node-spotify-api');
 // Include request Twitter api package
 var Twitter = require('twitter');
 
-const keys = require('./keys');
-
-
+// grab the liri request
 let liriCommand = (process.argv[2]);
 
 // Grab or assemble the subject of the request and store it
 let commandWords = (process.argv.slice(3));
 let commandSubject = commandWords.join('+');
 
-// console.log("liriCommand= " + liriCommand);
-// console.log("commandSubject= " + commandSubject);
+
 
 liriSwitcher(liriCommand, commandSubject);
 
@@ -28,70 +25,79 @@ function liriSwitcher(command, subject) {
     switch (command) {
         case "movie-this":
             queryOMDB(subject);
+            writeItLogIt("COMMAND: " + command + " / SEARCH: " + subject);
             break;
         case "do-what-it-says":
             queryRandom(subject);
+            writeItLogIt("COMMAND: " + command + " / SEARCH: " + subject);
             break;
         case "spotify-this-song":
             querySpotify(subject);
+            writeItLogIt("COMMAND: " + command + " / SEARCH: " + subject);
             break;
         case "my-tweets":
             queryTwitter();
+            writeItLogIt("COMMAND: " + command + " / SEARCH: " + subject);
             break;
         default:
-            console.log("--------------------------");
-            console.log("something is awfully wrong");
-            console.log("--------------------------\n");
+        writeItLogIt("--------------------------", true);
+        writeItLogIt("something is awfully wrong", true);
+        writeItLogIt("--------------------------\n", true);
             break;
     }
 }
+
+
+function writeItLogIt(writeIt, logIt) {
+ if (logIt) {
+    console.log(writeIt);
+ }
+
+    fs.appendFile('log.txt', writeIt+'\n', function (err) {
+    });
+
+}
+
 
 function queryOMDB(movieName) {
 
     // Then run a request to the OMDB API with the movie specified
     var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
 
-    // This line is just to help us debug against the actual URL.
-    // console.log(queryUrl);
-
     // Then run a request to the OMDB API with the movie specified
-    request(queryUrl, function(e, r, b) {
+    request(queryUrl, function (err, r, b) {
 
         var titleTest = JSON.parse(b).Title;
         // redundant with the parsing below, but need it i think, to get the array length to test if RottenTom rating is there
         var bObject = JSON.parse(b);
 
-        // console.log(b);
-
-        if (e) {
-            return console.log(error);
+        if (err) {
+            return writeItLogIt(error, true);
         }
 
         // If the request is successful (i.e. if the response status code is 200)
-        if (!e && r.statusCode === 200 && typeof titleTest !== 'undefined') {
+        if (!err && r.statusCode === 200 && typeof titleTest !== 'undefined') {
 
             // Parse the body of the site and display just the imdbRating property
-            // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
-            // console.log(r.statusCode);
-            console.log("--------------------------");
-            console.log(`* Title: ${JSON.parse(b).Title}`);
-            console.log(`* Year: ${JSON.parse(b).Year}`);
-            console.log(`* Rating: ${JSON.parse(b).imdbRating}`);
+            writeItLogIt("--------------------------", true);
+            writeItLogIt(`* Title: ${JSON.parse(b).Title}`, true);
+            writeItLogIt(`* Year: ${JSON.parse(b).Year}`, true);
+            writeItLogIt(`* Rating: ${JSON.parse(b).imdbRating}`, true);
 
             // check if array is large enough to have a RottenTomato rating. If not, skip
             if (1 < bObject.Ratings.length) {
-                console.log(`* RottenTom: ${JSON.parse(b).Ratings[1].Value}`);
+                writeItLogIt(`* RottenTom: ${JSON.parse(b).Ratings[1].Value}`, true);
             }
 
-            console.log(`* Country: ${JSON.parse(b).Country}`);
-            console.log(`* Language: ${JSON.parse(b).Language}`);
-            console.log(`* Plot: ${JSON.parse(b).Plot}`);
-            console.log(`* Actors: ${JSON.parse(b).Actors}`);
-            console.log("--------------------------\n");
+            writeItLogIt(`* Country: ${JSON.parse(b).Country}`, true);
+            writeItLogIt(`* Language: ${JSON.parse(b).Language}`, true);
+            writeItLogIt(`* Plot: ${JSON.parse(b).Plot}`, true);
+            writeItLogIt(`* Actors: ${JSON.parse(b).Actors}`, true);
+            writeItLogIt("--------------------------\n", true);
 
         } else {
 
-            console.log("...er, watch this instead:\n");
+            writeItLogIt("...er, watch this instead:\n");
             liriSwitcher('movie-this', 'Mr+Nobody');
 
         }
@@ -106,32 +112,32 @@ function queryTwitter(commandSubject) {
 
     var client = new Twitter(keys.twitter);
 
+    var params = {
+        screen_name: 'p2bilt',
+        count: 20
+    };
+    client.get('statuses/user_timeline', params, function (error, tweets, response) {
+        if (error) throw error;
 
-    // var userName = "p2bilt"
-    // var queryUrl = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + userName + "&count=20";
+        for (var i = 0, l = tweets.length; i < l; i++) {
+            var obj = tweets[i];
 
-    // https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline
-var params = {screen_name: 'p2bilt'};
-    client.get('statuses/user_timeline', params,  function(error, tweets, response) {
-  if(error) throw error;
-  // console.log("Tweets:");
+            // make date more readable; i could use moment.js to make it even better
+            var split = obj.created_at.split(' ');
+            var date = split.splice(1, 2);
+            var year = split[split.length - 1];
+            date.push(year);
+            date = date.join(' ');
 
+            writeItLogIt(i + 1, true);
+            writeItLogIt("--------------------------", true);
+            writeItLogIt("> " + obj.text, true);
+            writeItLogIt("--Tweeted on " + date, true);
+            writeItLogIt("--------------------------\n", true);
 
-for (var i = 0, l = tweets.length; i < l; i++) {
-var obj = tweets[i];
+        }
 
-// console.log(obj);
-
-console.log("--------------------------");
-  console.log(obj.created_at); 
-  console.log(obj.text); 
-console.log("--------------------------\n");
-
-}
-   // The favorites. 
-  // console.log("Response:");
-  // console.log(response);  // Raw response object. 
-});
+    });
 
 
 
@@ -141,37 +147,41 @@ console.log("--------------------------\n");
 
 function querySpotify(songName) {
 
-    // var queryUrl = "https://api.spotify.com/v1/search?q=" + commandSubject + "&type=track";
-
     var spotify = new Spotify(keys.spotify);
 
     if (songName) {
 
-        spotify.search({ type: 'track', query: songName, limit: 5 }, function(err, data) {
+        spotify.search({
+            type: 'track',
+            query: songName,
+            limit: 5
+        }, function (err, data) {
 
             if (err) {
-                return console.log('Error occurred: ' + err);
+                return writeItLogIt('Error occurred: ' + err, true);
             }
-
-            // console.log(data);
 
             for (var i = 0, l = data.tracks.items.length; i < l; i++) {
                 var obj = data.tracks.items[i];
 
-                // need to fix this to loop thru artists array, it only gets first artist
-                console.log("--------------------------");
-                console.log("* Artist: " + obj.artists[0].name);
-                console.log("* Song: " + obj.name);
-                console.log("* Link: " + obj.external_urls.spotify);
-                console.log("* Album: " + obj.album.name);
-                console.log("--------------------------\n");
+                // get all artists name from artist array
+                var artistes = obj.artists.map(function (item) {
+                    return item['name'];
+                });
+                writeItLogIt(i + 1, true);
+                writeItLogIt("--------------------------", true);
+                writeItLogIt("* Artist(s): " + artistes.join(', '), true);
+                writeItLogIt("* Song: " + obj.name, true);
+                writeItLogIt("* Link: " + obj.external_urls.spotify, true);
+                writeItLogIt("* Album: " + obj.album.name, true);
+                writeItLogIt("--------------------------\n", true);
             }
 
         });
 
     } else {
 
-        console.log("...er, listen to this instead:\n");
+        writeItLogIt("...er, listen to this instead:\n", true);
         liriSwitcher("spotify-this-song", "never+gonna+give+you+up");
 
     }
@@ -183,14 +193,14 @@ function querySpotify(songName) {
 
 function queryRandom(commandSubject) {
 
-    fs.readFile('random.txt', 'utf8', function(error, data) {
+    fs.readFile('random.txt', 'utf8', function (error, data) {
 
         // If there's an error log it and return
         if (error) {
-            return console.log(error);
+            return writeItLogIt(error, true);
         }
 
-        console.log("...imma read that text file, do what it says!\n");
+        writeItLogIt("...imma read that text file, do what it says!\n", true);
 
         // split data by CSV, put in array
         var dataArr = data.split(",");

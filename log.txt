@@ -1,0 +1,289 @@
+COMMAND: my-tweets - SEARCH: 
+1
+--------------------------
+> RT @Kurt_Vonnegut: I tell you, we are here on Earth to fart around, and don't let anybody tell you different.
+--Tweeted on Feb 11 2018
+--------------------------
+
+2
+--------------------------
+> RT @FrontendDaily: Debugging JavaScript with the New Firefox JS Debugger: https://t.co/ImqwxZZu15 (Firefox's new JavaScript debugger is pre…
+--Tweeted on Feb 11 2018
+--------------------------
+
+3
+--------------------------
+> RT @CodeWisdom: "The trouble with programmers is that you can never tell what a programmer is doing until it’s too late." - Seymour Cray
+--Tweeted on Feb 11 2018
+--------------------------
+
+4
+--------------------------
+> RT @nytimes: What Is Curling? Where Ice, Granite and Brooms Meet https://t.co/RkKJh2z7WL
+--Tweeted on Feb 11 2018
+--------------------------
+
+5
+--------------------------
+> RT @nytimes: Red Gerard is the youngest snowboarding gold medalist ever, and the U.S.’s youngest male gold-medalist at the Winter Olympics…
+--Tweeted on Feb 11 2018
+--------------------------
+
+6
+--------------------------
+> RT @elonmusk: Love and Rockets https://t.co/VnnFXb1Iig
+--Tweeted on Feb 11 2018
+--------------------------
+
+7
+--------------------------
+> RT @CodeWisdom: “You’re building your own maze, in a way, and you might just get lost in it.” - Marijn Haverbeke, Eloquent JavaScript: A Mo…
+--Tweeted on Feb 11 2018
+--------------------------
+
+8
+--------------------------
+> RT @CodeWisdom: "There's never enough time to design the right solution, but somehow always an infinite amount of time for supporting the w…
+--Tweeted on Feb 11 2018
+--------------------------
+
+9
+--------------------------
+> RT @1rep1set2great: First, Shaun White and now Red Gerard. Red-heads must just better at snowbaording, it’s science! #redgerard #OlympicGam…
+--Tweeted on Feb 11 2018
+--------------------------
+
+10
+--------------------------
+> RT @shrieksofadore: "Not all science fiction has the same ancestral bloodline." - @Nnedi
+https://t.co/Jo405rQkMV
+--Tweeted on Feb 11 2018
+--------------------------
+
+11
+--------------------------
+> RT @TananariveDue: Editor: "Can you write a science fiction story for me set in a dystopia?"
+Me: "Uhm...You mean like now?"
+--Tweeted on Feb 11 2018
+--------------------------
+
+12
+--------------------------
+> RT @IndieWire: The New Golden Age of Studio Science-Fiction is Upon Us: https://t.co/nIHyDRpTDH https://t.co/vOOqHhvVmE
+--Tweeted on Feb 11 2018
+--------------------------
+
+13
+--------------------------
+> RT @Ebonyteach: No shade to Elon, but I don't want a corporation being the first to set foot on Mars. I kinda want it to be the representat…
+--Tweeted on Feb 11 2018
+--------------------------
+
+14
+--------------------------
+> RT @TheFavoritist: Ohh my god @ChrisG_NSF &amp; @NASASpaceflight! Remote number one from Falcon Heavy! https://t.co/aj4ly8Cr5r
+--Tweeted on Feb 11 2018
+--------------------------
+
+15
+--------------------------
+> RT @CodeWisdom: "When debugging, novices insert corrective code; experts remove defective code." - Richard Pattis
+--Tweeted on Feb 11 2018
+--------------------------
+
+16
+--------------------------
+> RT @CodeWisdom: "For me, part of what makes programming fun is trying to write programs that have an intellectual integrity to them ... so…
+--Tweeted on Feb 11 2018
+--------------------------
+
+17
+--------------------------
+> RT @CodeWisdom: “Computers are good at following instructions, but not at reading your mind.” - Donald Knuth
+--Tweeted on Feb 11 2018
+--------------------------
+
+18
+--------------------------
+> MEANWHILE, IN OUTER SPACE, https://t.co/5KO5nkhrWH
+--Tweeted on Feb 07 2018
+--------------------------
+
+19
+--------------------------
+> Bradbury! + Asimov! + Ballard! + Clark! + Wells! = https://t.co/0c6FN025Fd
+--Tweeted on Feb 07 2018
+--------------------------
+
+20
+--------------------------
+> When's the last time you thought "This is a great time to be alive"? This week: underdogs victorious (Fly Eagles Fl… https://t.co/axabRNJ8it
+--Tweeted on Feb 07 2018
+--------------------------
+
+COMMAND: movie-this / SEARCH: gremlins
+--------------------------
+* Title: Gremlins
+* Year: 1984
+* Rating: 7.2
+* RottenTom: 84%
+* Country: USA
+* Language: English, Spanish
+* Plot: A boy inadvertently breaks three important rules concerning his new pet and unleashes a horde of malevolently mischievous monsters on a small town.
+* Actors: Hoyt Axton, John Louie, Keye Luke, Don Steele
+--------------------------
+
+COMMAND: spotify-this-song / SEARCH: blackhole+sun
+1
+--------------------------
+* Artist(s): James Coane
+* Song: Blackhole Sun
+* Link: https://open.spotify.com/track/5McMJ0sOA2OdvQcC0zdkka
+* Album: Bluework
+--------------------------
+
+2
+--------------------------
+* Artist(s): Blackhole
+* Song: Gold Green Sun Beyond the Horsehead Nebula
+* Link: https://open.spotify.com/track/7FFhBMaoweN3FNFqZmSBmL
+* Album: Death By Salt III: A SLUG Magazine Compilation
+--------------------------
+
+3
+--------------------------
+* Artist(s): Blackhole
+* Song: Gold Green Sun Beyond the Horsehead Nebula
+* Link: https://open.spotify.com/track/790s2qgspIoSO4sMfug0Cj
+* Album: Death By Salt III: Songs Of Everlasting Joy
+--------------------------
+
+COMMAND: spotify-this-song / SEARCH: black+hole+sun
+1
+--------------------------
+* Artist(s): Soundgarden
+* Song: Black Hole Sun
+* Link: https://open.spotify.com/track/2EoOZnxNgtmZaD8uUmz2nD
+* Album: Superunknown (Deluxe Edition)
+--------------------------
+
+2
+--------------------------
+* Artist(s): Ramin Djawadi
+* Song: Black Hole Sun
+* Link: https://open.spotify.com/track/6wsMHvpBR2rYTCQy39Qqm2
+* Album: Westworld: Season 1 (Music from the HBO® Series)
+--------------------------
+
+3
+--------------------------
+* Artist(s): Soundgarden
+* Song: Black Hole Sun
+* Link: https://open.spotify.com/track/5BHfKRD3LTxFz1tX8AH0DN
+* Album: Telephantasm
+--------------------------
+
+4
+--------------------------
+* Artist(s): Nouela
+* Song: Black Hole Sun
+* Link: https://open.spotify.com/track/3MoJoDStgGIfFEGkRzUSEB
+* Album: Black Hole Sun
+--------------------------
+
+5
+--------------------------
+* Artist(s): Soundgarden
+* Song: Black Hole Sun
+* Link: https://open.spotify.com/track/4xdHI4eFNst0vTZuuKrWjr
+* Album: Superunknown (20th Anniversary)
+--------------------------
+
+...er, listen to this instead:
+
+COMMAND: spotify-this-song / SEARCH: never+gonna+give+you+up
+COMMAND: spotify-this-song / SEARCH: 
+1
+--------------------------
+* Artist(s): Rick Astley
+* Song: Never Gonna Give You Up
+* Link: https://open.spotify.com/track/7GhIk7Il098yCjg4BQjzvb
+* Album: Whenever You Need Somebody
+--------------------------
+
+2
+--------------------------
+* Artist(s): Rick Astley
+* Song: Never Gonna Give You Up
+* Link: https://open.spotify.com/track/0FutrWIUM5Mg3434asiwkp
+* Album: Platinum & Gold Collection
+--------------------------
+
+3
+--------------------------
+* Artist(s): The Black Keys
+* Song: Never Gonna Give You Up
+* Link: https://open.spotify.com/track/4qjqO5m5e5vebk9upd7xUU
+* Album: Brothers
+--------------------------
+
+4
+--------------------------
+* Artist(s): Mac Beez
+* Song: Never Gonna Give You Up
+* Link: https://open.spotify.com/track/5fnDDcjcXKUvJ6iSnpiU0v
+* Album: Never Gonna Give You Up
+--------------------------
+
+5
+--------------------------
+* Artist(s): Cake
+* Song: Never, Never Gonna Give You Up
+* Link: https://open.spotify.com/track/2FtkkT7TLF16cnxKNr21Ko
+* Album: b-sides and rarities
+--------------------------
+
+COMMAND: do-what-it-says / SEARCH: 
+...imma read that text file, do what it says!
+
+COMMAND: spotify-this-song / SEARCH: "I Want it That Way"
+1
+--------------------------
+* Artist(s): Backstreet Boys
+* Song: I Want It That Way
+* Link: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
+* Album: The Hits--Chapter One
+--------------------------
+
+2
+--------------------------
+* Artist(s): Backstreet Boys
+* Song: I Want It That Way
+* Link: https://open.spotify.com/track/68y6OIiE1nDdI1MLQdJNh8
+* Album: The Essential Backstreet Boys
+--------------------------
+
+3
+--------------------------
+* Artist(s): Backstreet Boys
+* Song: I Want It That Way
+* Link: https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya
+* Album: Millennium
+--------------------------
+
+4
+--------------------------
+* Artist(s): Anthem Lights
+* Song: I Want It That Way
+* Link: https://open.spotify.com/track/3Ww6kEWxLh4Ub4WPJ9hMtA
+* Album: Covers Part IV
+--------------------------
+
+5
+--------------------------
+* Artist(s): Glee Cast
+* Song: Bye Bye Bye / I Want It That Way (Glee Cast Version)
+* Link: https://open.spotify.com/track/3t7m7AzV2ntuI9fIT6KREP
+* Album: Bye Bye Bye / I Want It That Way (Glee Cast Version)
+--------------------------
+
